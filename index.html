@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="/Css/style.css">
+    <link rel="stylesheet" href="Css/style.css">
 </head>
 <body>
 
@@ -19,6 +19,7 @@
 <header class="header">
     <nav class="nav">
         <span class="nav-logo">MS</span>
+
         <div class="nav-links">
             <a href="#sobre">Sobre</a>
             <a href="#experiencia">Experiência</a>
@@ -30,7 +31,7 @@
     <div class="hero">
         <div class="hero-img-wrap">
             <div class="hero-img-glow"></div>
-            <img src="/Img/foto.jpeg" alt="Foto de perfil de Matheus Santana, desenvolvedor back-end">
+            <img src="Img/foto.jpeg" alt="Foto de perfil de Matheus Santana, desenvolvedor back-end">
         </div>
         <div class="hero-text">
             <p class="hero-label">
@@ -55,7 +56,7 @@
             </div>
             <div class="hero-cta">
                 <a href="#projetos" class="btn-primary">Ver Projetos</a>
-                <a href="/Curriculo/Curriculo_Matheus_Santana.pdf" class="btn-ghost" download>
+                <a href="Curriculo/Curriculo_Matheus_Santana.pdf" class="btn-ghost" download>
                     <i class="fas fa-arrow-down"></i> Baixar Currículo
                 </a>
                 <a href="#contato" class="btn-ghost">Contato</a>
@@ -158,7 +159,7 @@
                         <div class="video-wrap">
                             <iframe width="100%" height="180" src="https://www.youtube.com/embed/e69RqxhN1oo" frameborder="0" loading="lazy" allowfullscreen title="Demonstração em vídeo: Dashboard de Gerenciamento de Tarefas"></iframe>
                         </div>
-                        <button class="btn-code" onclick="abrirProjeto('https://github.com/mat9831/sistema-dashboard.git')">
+                        <button class="btn-code" onclick="abrirProjeto('https://github.com/mssantanadev/sistema-dashboard')">
                             <i class="fab fa-github"></i> Ver Código
                         </button>
                     </div>
@@ -181,7 +182,7 @@
                         <div class="video-wrap">
                             <iframe width="100%" height="180" src="https://www.youtube.com/embed/veBtnNvcUpA" frameborder="0" loading="lazy" allowfullscreen title="Demonstração em vídeo: MS Bank - Simulador Bancário"></iframe>
                         </div>
-                        <button class="btn-code" onclick="abrirProjeto('https://github.com/mat9831/Ms-Bank')">
+                        <button class="btn-code" onclick="abrirProjeto('https://github.com/mssantanadev/Ms-Bank')">
                             <i class="fab fa-github"></i> Ver Código
                         </button>
                     </div>
@@ -207,7 +208,7 @@
                         <div class="video-wrap">
                             <iframe width="100%" height="180" src="https://www.youtube.com/embed/3ODU_kzfP0Q" frameborder="0" loading="lazy" allowfullscreen title="Demonstração em vídeo: Web API de Empréstimo Consignado"></iframe>
                         </div>
-                        <button class="btn-code" onclick="abrirProjeto('https://github.com/mat9831/Web-API-Empr-stimos')">
+                        <button class="btn-code" onclick="abrirProjeto('https://github.com/mssantanadev/Web-API-Empr-stimos')">
                             <i class="fab fa-github"></i> Ver Código
                         </button>
                     </div>
@@ -230,18 +231,45 @@
                             <span class="badge">Razor</span>
                             <span class="badge">BRAPI</span>
                         </div>
+                        
+                        <!-- // Web API Finance Intelligent -->
                         <h3>Gestor Financeiro</h3>
                         <p>Aplicação web para gestão financeira que integra controle de receitas, despesas, metas financeiras, investimentos na bolsa de valores e em uma simulação de caixinha rendendo de 100 a 120 % do CDI.
-                         Consome dados da B3 via API para atualização de cotações, permitindo simulação de compras, acompanhamento da carteira e projeções de rendimento.</p>
+                        Consome dados da B3 via API para atualização de cotações, permitindo simulação de compras, acompanhamento da carteira e projeções de rendimento.</p>
                         <div class="video-wrap">
                             <iframe width="100%" height="180" src="https://www.youtube.com/embed/8pMiPCqNBSI" frameborder="0" loading="lazy" allowfullscreen title="Demonstração em vídeo: Web API de Empréstimo Consignado"></iframe>
                         </div>
-                        <button class="btn-code" onclick="abrirProjeto('https://github.com/mat9831/GestorFinanceiro')">
+                        <button class="btn-code" onclick="abrirProjeto('https://github.com/mssantanadev/GestorFinanceiro')">
                             <i class="fab fa-github"></i> Ver Código
                         </button>
                     </div>
                 </div>
                 
+                <div class="project-card">
+                    <div class="project-img no-img">
+                        <div class="project-icon-big"><i class="fas fa-landmark"></i></div>
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-badges">
+                            <span class="badge">C#</span>
+                            <span class="badge">ASP.NET Core MVC</span>
+                            <span class="badge">REST API</span>
+                            <span class="badge">JSON</span>
+                            <span class="badge">Swagger</span>
+                        </div>
+                        <h3>Web API Finance Intelligent</h3>
+                        <p>REST API para consulta de indicadores econômicos e cotações de câmbio em tempo real, integrando dados oficiais do Banco Central 
+                        (SELIC, IPCA) e da AwesomeAPI (Dólar, Euro). Inclui histórico de indicadores e documentação interativa via Swagger.</p>
+                        <div class="video-wrap">
+                            <iframe width="100%" height="180" src="https://www.youtube.com/embed/XK4pNCYyWv0" frameborder="0" loading="lazy" allowfullscreen title="Demonstração em vídeo: Web API de Empréstimo Consignado"></iframe>
+                        </div>
+                        <button class="btn-code" onclick="abrirProjeto('https://github.com/mssantanadev/FinanceIntelligent.API')">
+                            <i class="fab fa-github"></i> Ver Código
+                        </button>
+                    </div>
+                </div>
+
                 <!-- Calculadora Card -->
                 <div class="project-card">
                     <div class="project-img no-img">
@@ -259,7 +287,7 @@
                         <div class="video-wrap">
                             <iframe width="100%" height="180" src="https://www.youtube.com/embed/_qHIczeK3Uc" frameborder="0" loading="lazy" allowfullscreen title="Demonstração em vídeo: Calculadora de Emissão de Carbono"></iframe>
                         </div>
-                        <button class="btn-code" onclick="abrirProjeto('https://github.com/mat9831/aps_carbono')">
+                        <button class="btn-code" onclick="abrirProjeto('https://github.com/mssantanadev/aps_carbono')">
                             <i class="fab fa-github"></i> Ver Código
                         </button>
                     </div>
@@ -277,20 +305,20 @@
             <div class="footer-left">
                 <div class="footer-logo">MS</div>
                 <p>Desenvolvedor C# · ASP.NET · SQL Server</p>
-                <a href="mailto:lu7531071@gmail.com" class="footer-email">
-                    <i class="fas fa-envelope"></i> lu7531071@gmail.com
+                <a href="mailto:matheussantana.develop@gmail.com" class="footer-email">
+                    <i class="fas fa-envelope"></i> matheussantana.develop@gmail.com
                 </a>
             </div>
             <div class="footer-right">
                 <p class="footer-label">Redes sociais</p>
                 <div class="redes">
-                    <a href="https://www.instagram.com/matheusz_.santana" target="_blank" title="Instagram">
+                    <a href="https://www.instagram.com/matheusz__santana/" target="_blank" title="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
                     <a href="https://www.linkedin.com/in/matheusdssantana" target="_blank" title="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://github.com/mat9831" target="_blank" title="GitHub">
+                    <a href="https://github.com/mssantanadev" target="_blank" title="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
                 </div>
@@ -302,6 +330,6 @@
     </div>
 </footer>
 
-<script src="/Js/script.js"></script>
+<script src="Js/script.js"></script>
 </body>
 </html>
