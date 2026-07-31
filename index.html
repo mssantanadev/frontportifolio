@@ -3,333 +3,280 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matheus Santana — Desenvolvedor Back-end C# & ASP.NET</title>
-    <meta name="description" content="Portfólio de Matheus Santana, desenvolvedor back-end especializado em C#, ASP.NET Core e SQL Server, com atuação em soluções financeiras e QA.">
-    <meta property="og:title" content="Matheus Santana — Desenvolvedor Back-end C# & ASP.NET">
-    <meta property="og:description" content="Aplicações web com C#, ASP.NET Core e SQL Server, unindo performance, segurança e escalabilidade.">
+    <meta name="theme-color" content="#111715">
+    <title>Matheus Santana | QA, C# e back-end sem caixa-preta</title>
+    <meta name="description" content="Portfólio de Matheus Santana: analista de testes e desenvolvedor back-end C#/.NET. Projetos documentados, APIs e sistemas financeiros construídos com atenção ao que acontece por baixo da interface.">
+    <meta property="og:title" content="Matheus Santana: evidência antes do efeito">
+    <meta property="og:description" content="QA, C# e back-end. Eu encontro o que quebra e construo o que aguenta.">
     <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Css/style.css">
 </head>
 <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-<!-- HEADER -->
-<header class="header">
-    <nav class="nav">
-        <span class="nav-logo">MS</span>
+    <header class="site-header">
+        <a class="wordmark" href="#inicio" aria-label="Matheus Santana, início">
+            <span>M/S</span><sup>26</sup>
+        </a>
 
-        <div class="nav-links">
-            <a href="#sobre">Sobre</a>
-            <a href="#experiencia">Experiência</a>
-            <a href="#projetos">Projetos</a>
-            <a href="#contato">Contato</a>
-        </div>
-    </nav>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu-principal">
+            <span>Menu</span>
+            <span class="menu-mark" aria-hidden="true"></span>
+        </button>
 
-    <div class="hero">
-        <div class="hero-img-wrap">
-            <div class="hero-img-glow"></div>
-            <img src="Img/foto.jpeg" alt="Foto de perfil de Matheus Santana, desenvolvedor back-end">
-        </div>
-        <div class="hero-text">
-            <p class="hero-label">
-                <span class="hero-label-dot"></span>
-                Desenvolvedor de Software
-            </p>
-            <h1>Matheus<br><span>Santana</span></h1>
-            <p class="hero-desc">Desenvolvo aplicações web modernas com C#, ASP.NET Core e SQL Server, unindo performance, segurança e escalabilidade para criar soluções que fazem a diferença.</p>
-            <div class="hero-stack">
-                <div class="stack-pill">
-                    <svg viewBox="0 0 128 128" width="16" height="16"><path fill="#9B4F96" d="M115.4 30.7L67.1 2.9c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.4 1 3.5l106.8-61.5c-.6-1.2-1.6-2.1-2.4-3.2z"/><path fill="#68217A" d="M10.7 95.3c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4V36.1c0-.9-.1-1.9-.6-2.8l-106.6 62z"/><path fill="#fff" d="M85.3 76.1C81.1 83.5 73.1 88.5 64 88.5c-13.5 0-24.5-11-24.5-24.5s11-24.5 24.5-24.5c9.1 0 17.1 5 21.3 12.5l13-7.5c-6.8-11.9-19.6-20-34.3-20-21.8 0-39.5 17.7-39.5 39.5s17.7 39.5 39.5 39.5c14.6 0 27.4-8 34.2-19.8l-12.9-7.6z"/><path fill="#fff" d="M104 67.1h-4v-4h-4v4h-4v4h4v4h4v-4h4zm14 0h-4v-4h-4v4h-4v4h4v4h4v-4h4z"/></svg>
-                    C#
-                </div>
-                <div class="stack-pill">
-                    <svg viewBox="0 0 128 128" width="16" height="16"><circle cx="64" cy="64" r="62" fill="#7B2FBE"/><text x="64" y="60" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" font-weight="bold" fill="white">.NET</text><text x="64" y="85" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="white">Core</text></svg>
-                    ASP.NET Core
-                </div>
-                <div class="stack-pill">
-                    <svg viewBox="0 0 160 180" width="16" height="18"><defs><linearGradient id="h1" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#0070d0"/><stop offset="60%" stop-color="#40c0f0"/><stop offset="100%" stop-color="#0060b0"/></linearGradient><linearGradient id="h4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#b0eaff"/><stop offset="100%" stop-color="#50b8f0"/></linearGradient><linearGradient id="h5" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0050a0"/><stop offset="100%" stop-color="#1878c8"/></linearGradient></defs><rect x="8" y="28" width="144" height="124" rx="4" fill="url(#h1)"/><ellipse cx="80" cy="30" rx="72" ry="20" fill="url(#h4)"/><ellipse cx="80" cy="152" rx="72" ry="20" fill="url(#h5)"/></svg>
-                    SQL Server
+        <nav class="nav" id="menu-principal" aria-label="Navegação principal">
+            <a href="#sobre"><span>01</span> Perfil</a>
+            <a href="#trajetoria"><span>02</span> Trajetória</a>
+            <a href="#projetos"><span>03</span> Projetos</a>
+            <a href="#contato"><span>04</span> Contato</a>
+        </nav>
+    </header>
+
+    <main id="conteudo">
+        <section class="hero" id="inicio" aria-labelledby="hero-title">
+            <div class="hero-grid" aria-hidden="true"></div>
+            <div class="hero-copy reveal">
+                <p class="eyebrow"><span class="live-dot"></span> São Paulo · QA + Back-end</p>
+                <h1 id="hero-title">Eu encontro<br>o que <em>quebra.</em><br>Depois construo<br>o que <em>aguenta.</em></h1>
+                <div class="hero-bottom">
+                    <p>Sou <strong>Matheus Santana</strong>. Trabalho com qualidade em sistemas financeiros e transformo essa atenção aos detalhes em aplicações C#, APIs e bancos de dados bem pensados.</p>
+                    <div class="hero-actions">
+                        <a class="button button-dark" href="#projetos">Ver os casos <span aria-hidden="true">↘</span></a>
+                        <a class="text-link" href="Curriculo/Curriculo_Matheus_Santana.pdf" download>Baixar currículo <span aria-hidden="true">↓</span></a>
+                    </div>
                 </div>
             </div>
-            <div class="hero-cta">
-                <a href="#projetos" class="btn-primary">Ver Projetos</a>
-                <a href="Curriculo/Curriculo_Matheus_Santana.pdf" class="btn-ghost" download>
-                    <i class="fas fa-arrow-down"></i> Baixar Currículo
-                </a>
-                <a href="#contato" class="btn-ghost">Contato</a>
-            </div>
-        </div>
-    </div>
-</header>
 
-<!-- SOBRE -->
-<section class="sobre" id="sobre">
-    <div class="container">
-        <div class="section-label"><span class="section-label-line"></span> sobre mim</div>
-        <div class="sobre-grid">
-            <div class="sobre-text">
-                <h2>Construindo soluções web com precisão e qualidade</h2>
-                <p>Desenvolvedor focado em aplicações web com C#, ASP.NET e SQL Server. Tenho experiência com APIs REST, sistemas web e integração de bancos de dados.</p>
-                <p>Atualmente na <strong>Função Sistemas</strong>, empresa especializada em soluções financeiras para o setor de crédito consignado, onde também atuo em QA com testes manuais e automatizados.</p>
-            </div>
-            <div class="sobre-cards">
-                <div class="info-card">
-                    <i class="fas fa-code"></i>
-                    <span>Back-end</span>
-                    <p>C# · ASP.NET · APIs REST</p>
+            <figure class="portrait reveal">
+                <div class="portrait-frame">
+                    <img src="Img/foto.jpeg" alt="Matheus Santana sorrindo, de camisa social clara">
                 </div>
-                <div class="info-card">
-                    <i class="fas fa-database"></i>
-                    <span>Banco de Dados</span>
-                    <p>SQL Server · Queries · Integração</p>
-                </div>
-                <div class="info-card">
-                    <i class="fas fa-vial"></i>
-                    <span>Qualidade</span>
-                    <p>QA · Testes manuais · Automatizados</p>
-                </div>
-                <div class="info-card">
-                    <i class="fas fa-building"></i>
-                    <span>Empresa Atual</span>
-                    <p>Função Sistemas</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+            </figure>
 
-<!-- EXPERIÊNCIA -->
-<section class="experiencia" id="experiencia">
-    <div class="container">
-        <div class="section-label"><span class="section-label-line"></span> trajetória</div>
-        <h2 class="section-title" style="margin-bottom: 40px;">Experiência Profissional</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-header">
+            <p class="margin-note" aria-hidden="true">EVIDÊNCIA<br>ANTES DO<br>EFEITO</p>
+        </section>
+
+        <section class="manifesto" id="sobre" aria-labelledby="manifesto-title">
+            <div class="section-index reveal">
+                <span>01 / Perfil</span>
+                <span>Ler nas entrelinhas</span>
+            </div>
+            <div class="manifesto-layout">
+                <h2 id="manifesto-title" class="reveal">Interface bonita chama atenção. <span>Sistema confiável mantém.</span></h2>
+                <div class="manifesto-copy reveal">
+                    <p>Meu olhar para desenvolvimento nasceu do outro lado: testando fluxos, validando dados e encontrando inconsistências antes que elas chegassem ao usuário.</p>
+                    <p>Hoje, em paralelo ao trabalho com QA, construo projetos em C# e ASP.NET. Qualidade e desenvolvimento caminham juntos, e uma disciplina torna a outra melhor.</p>
+                </div>
+            </div>
+            <div class="principles" aria-label="Princípios de trabalho">
+                <article class="principle reveal">
+                    <span class="principle-number">A</span>
+                    <h3>Entender o fluxo</h3>
+                    <p>Antes de escrever código, descubro quem usa, onde falha e qual dado realmente importa.</p>
+                </article>
+                <article class="principle reveal">
+                    <span class="principle-number">B</span>
+                    <h3>Testar a hipótese</h3>
+                    <p>Uma solução só está pronta quando o caminho feliz e os cantos difíceis foram verificados.</p>
+                </article>
+                <article class="principle reveal">
+                    <span class="principle-number">C</span>
+                    <h3>Deixar evidência</h3>
+                    <p>Documentação, nomes claros e demonstrações tornam o trabalho compreensível para a próxima pessoa.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="trajectory" id="trajetoria" aria-labelledby="trajectory-title">
+            <div class="section-index reveal">
+                <span>02 / Trajetória</span>
+                <span>Do processo ao sistema</span>
+            </div>
+            <div class="trajectory-heading reveal">
+                <h2 id="trajectory-title">Minha carreira sempre foi sobre fazer o processo funcionar.</h2>
+                <p>O cenário mudou. Saí da linha de produção e cheguei ao software, mas a curiosidade por entender cada etapa ficou.</p>
+            </div>
+
+            <ol class="timeline">
+                <li class="timeline-item reveal">
+                    <div class="timeline-date">2022 a 2024</div>
+                    <div class="timeline-role">
+                        <span>New Print</span>
+                        <h3>Apontador de Produção</h3>
+                    </div>
+                    <p>Operação de chapas CTP, manutenção de processo, atendimento e treinamento. Foi onde aprendi que detalhe técnico e resultado final são a mesma conversa.</p>
+                </li>
+                <li class="timeline-item current reveal">
+                    <div class="timeline-date">Desde 2024</div>
+                    <div class="timeline-role">
+                        <span>Função Sistemas</span>
                         <h3>Analista de Testes (QA) Júnior</h3>
-                        <span class="timeline-date">Ago/2024 — Atual</span>
                     </div>
-                    <p class="timeline-company">Função Sistemas</p>
-                    <p>Testes manuais e automatizados em sistemas de crédito consignado, scripts SQL para validação de dados e testes de funcionalidades em aplicações ASP.NET junto à equipe de desenvolvimento.</p>
-                </div>
+                    <p>Testes manuais e automatizados em crédito consignado, consultas T-SQL, validação de dados e colaboração diária com aplicações ASP.NET e a equipe C#.</p>
+                </li>
+                <li class="timeline-item reveal">
+                    <div class="timeline-date">Concluído em 2026</div>
+                    <div class="timeline-role">
+                        <span>UNIP</span>
+                        <h3>Ciência da Computação</h3>
+                    </div>
+                    <p>Base acadêmica que conectei à prática por meio de projetos próprios em APIs, finanças, banco de dados e aplicações web.</p>
+                </li>
+            </ol>
+
+            <div class="toolbox reveal">
+                <span class="toolbox-title">Caixa de ferramentas atual</span>
+                <ul>
+                    <li>C# / .NET</li>
+                    <li>ASP.NET Core</li>
+                    <li>SQL Server / T-SQL</li>
+                    <li>APIs REST</li>
+                    <li>Testes manuais e automatizados</li>
+                    <li>Python / dados</li>
+                </ul>
             </div>
+        </section>
+
+        <section class="work" id="projetos" aria-labelledby="work-title">
+            <div class="section-index reveal">
+                <span>03 / Projetos</span>
+                <span>O código deixa rastros</span>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- PROJETOS -->
-<section class="projetos" id="projetos">
-    <div class="container">
-        <div class="section-label"><span class="section-label-line"></span> projetos</div>
-        <div class="projetos-header">
-            <h2 class="section-title">Meus Projetos</h2>
-            <div class="carousel-nav">
-                <button class="carousel-btn" id="prevBtn" aria-label="Anterior">
-                    <i class="fas fa-arrow-left"></i>
-                </button>
-                <button class="carousel-btn" id="nextBtn" aria-label="Próximo">
-                    <i class="fas fa-arrow-right"></i>
-                </button>
+            <div class="work-heading reveal">
+                <h2 id="work-title">Casos, não cards.</h2>
+                <p>Cada projeto abaixo tem um problema, uma decisão técnica e uma demonstração. Clique para ver o funcionamento ou abrir o código.</p>
             </div>
-        </div>
 
-        <div class="carousel-wrapper">
-            <div class="carousel-track" id="carouselTrack">
-
-                <!-- Dashboard CARD -->
-                <div class="project-card">
-                    <div class="project-img no-img">
-                        <div class="project-icon-big"><i class="fas fa-clipboard-list"></i></div>
-                        <div class="project-overlay"></div>
-                    </div>
-                    <div class="project-body">
-                        <div class="project-badges">
-                            <span class="badge">C#</span>
-                            <span class="badge">ASP.NET</span>
-                            <span class="badge">SQL Server</span>
-                        </div>
-                        <h3>Dashboard de Gerenciamento de Tarefas</h3>
-                        <p>Sistema MVC para gerenciamento e acompanhamento de tarefas, com estrutura organizada e integração eficiente ao banco de dados.</p>
-                        <div class="video-wrap">
-                            <iframe width="100%" height="180" src="https://www.youtube.com/embed/e69RqxhN1oo" frameborder="0" loading="lazy" allowfullscreen title="Demonstração em vídeo: Dashboard de Gerenciamento de Tarefas"></iframe>
-                        </div>
-                        <button class="btn-code" onclick="abrirProjeto('https://github.com/mssantanadev/sistema-dashboard')">
-                            <i class="fab fa-github"></i> Ver Código
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Banco Card -->
-                <div class="project-card">
-                    <div class="project-img no-img">
-                        <div class="project-icon-big"><i class="fas fa-landmark"></i></div>
-                        <div class="project-overlay"></div>
-                    </div>
-                    <div class="project-body">
-                        <div class="project-badges">
-                            <span class="badge">C#</span>
-                            <span class="badge">REST API</span>
-                            <span class="badge">JSON</span>
-                        </div>
-                        <h3>MS Bank – Simulador Bancário</h3>
-                        <p>Aplicação MVC que simula operações bancárias: depósitos, saques, transferências e extrato financeiro em tempo real.</p>
-                        <div class="video-wrap">
-                            <iframe width="100%" height="180" src="https://www.youtube.com/embed/veBtnNvcUpA" frameborder="0" loading="lazy" allowfullscreen title="Demonstração em vídeo: MS Bank - Simulador Bancário"></iframe>
-                        </div>
-                        <button class="btn-code" onclick="abrirProjeto('https://github.com/mssantanadev/Ms-Bank')">
-                            <i class="fab fa-github"></i> Ver Código
-                        </button>
-                    </div>
-                </div>
-
-                    <!-- Web Api Emprestimo Card -->
-                <div class="project-card">
-                    <div class="project-img no-img">
-                        <div class="project-icon-big"><i class="fas fa-landmark"></i></div>
-                        <div class="project-overlay"></div>
-                    </div>
-                    <div class="project-body">
-                        <div class="project-badges">
-                            <span class="badge">C#</span>
-                            <span class="badge">ASP.NET</span>
-                            <span class="badge">SQL Server</span>
-                            <span class="badge">REST API</span>
-                            <span class="badge">JSON</span>
-                            <span class="badge">Swagger / Redoc</span>
-                        </div>
-                        <h3>Web API – Empréstimo Consignado</h3>
-                        <p>REST API para gestão de propostas de empréstimo: cadastro, consulta e exclusão, processando valor, prazo, taxa de juros, renda e score de crédito. Documentação interativa via Redoc.</p>
-                        <div class="video-wrap">
-                            <iframe width="100%" height="180" src="https://www.youtube.com/embed/3ODU_kzfP0Q" frameborder="0" loading="lazy" allowfullscreen title="Demonstração em vídeo: Web API de Empréstimo Consignado"></iframe>
-                        </div>
-                        <button class="btn-code" onclick="abrirProjeto('https://github.com/mssantanadev/Web-API-Empr-stimos')">
-                            <i class="fab fa-github"></i> Ver Código
-                        </button>
-                    </div>
-                </div>
-
-                    <!-- Gestor Financeiro Card -->
-                <div class="project-card">
-                    <div class="project-img no-img">
-                        <div class="project-icon-big"><i class="fas fa-landmark"></i></div>
-                        <div class="project-overlay"></div>
-                    </div>
-                    <div class="project-body">
-                        <div class="project-badges">
-                            <span class="badge">C#</span>
-                            <span class="badge">ASP.NET Core MVC</span>
-                            <span class="badge">SQL Server</span>
-                            <span class="badge">REST API</span>
-                            <span class="badge">Entity Framework Core</span>
-                            <span class="badge">Bootstrap</span>
-                            <span class="badge">Razor</span>
-                            <span class="badge">BRAPI</span>
-                        </div>
-                        
-                        <!-- // Web API Finance Intelligent -->
+            <div class="project-list">
+                <article class="project project-featured reveal">
+                    <div class="project-number">CASO 01</div>
+                    <a class="project-media" href="https://www.youtube.com/watch?v=8pMiPCqNBSI" target="_blank" rel="noopener noreferrer" aria-label="Assistir demonstração do Gestor Financeiro no YouTube">
+                        <img src="https://img.youtube.com/vi/8pMiPCqNBSI/maxresdefault.jpg" alt="Tela do projeto Gestor Financeiro" loading="lazy">
+                        <span class="play-label">Ver demonstração <b aria-hidden="true">↗</b></span>
+                    </a>
+                    <div class="project-copy">
+                        <p class="project-kind">Aplicação financeira · projeto principal</p>
                         <h3>Gestor Financeiro</h3>
-                        <p>Aplicação web para gestão financeira que integra controle de receitas, despesas, metas financeiras, investimentos na bolsa de valores e em uma simulação de caixinha rendendo de 100 a 120 % do CDI.
-                        Consome dados da B3 via API para atualização de cotações, permitindo simulação de compras, acompanhamento da carteira e projeções de rendimento.</p>
-                        <div class="video-wrap">
-                            <iframe width="100%" height="180" src="https://www.youtube.com/embed/8pMiPCqNBSI" frameborder="0" loading="lazy" allowfullscreen title="Demonstração em vídeo: Web API de Empréstimo Consignado"></iframe>
-                        </div>
-                        <button class="btn-code" onclick="abrirProjeto('https://github.com/mssantanadev/GestorFinanceiro')">
-                            <i class="fab fa-github"></i> Ver Código
-                        </button>
+                        <p>Controle de receitas, despesas, metas e investimentos em uma aplicação só. Consome cotações da B3 via API, acompanha carteira e simula rendimentos atrelados ao CDI.</p>
+                        <ul class="tags" aria-label="Tecnologias">
+                            <li>C#</li><li>ASP.NET Core MVC</li><li>SQL Server</li><li>Entity Framework</li><li>BRAPI</li>
+                        </ul>
+                        <a class="case-link" href="https://github.com/mssantanadev/GestorFinanceiro" target="_blank" rel="noopener noreferrer">Abrir repositório <span aria-hidden="true">↗</span></a>
                     </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-img no-img">
-                        <div class="project-icon-big"><i class="fas fa-landmark"></i></div>
-                        <div class="project-overlay"></div>
-                    </div>
-                    <div class="project-body">
-                        <div class="project-badges">
-                            <span class="badge">C#</span>
-                            <span class="badge">ASP.NET Core MVC</span>
-                            <span class="badge">REST API</span>
-                            <span class="badge">JSON</span>
-                            <span class="badge">Swagger</span>
-                        </div>
-                        <h3>Web API Finance Intelligent</h3>
-                        <p>REST API para consulta de indicadores econômicos e cotações de câmbio em tempo real, integrando dados oficiais do Banco Central 
-                        (SELIC, IPCA) e da AwesomeAPI (Dólar, Euro). Inclui histórico de indicadores e documentação interativa via Swagger.</p>
-                        <div class="video-wrap">
-                            <iframe width="100%" height="180" src="https://www.youtube.com/embed/XK4pNCYyWv0" frameborder="0" loading="lazy" allowfullscreen title="Demonstração em vídeo: Web API de Empréstimo Consignado"></iframe>
-                        </div>
-                        <button class="btn-code" onclick="abrirProjeto('https://github.com/mssantanadev/FinanceIntelligent.API')">
-                            <i class="fab fa-github"></i> Ver Código
-                        </button>
-                    </div>
-                </div>
+                </article>
 
-                <!-- Calculadora Card -->
-                <div class="project-card">
-                    <div class="project-img no-img">
-                        <div class="project-icon-big"><i class="fas fa-earth-americas"></i></div>
-                        <div class="project-overlay"></div>
-                    </div>
-                    <div class="project-body">
-                        <div class="project-badges">
-                            <span class="badge">JavaScript</span>
-                            <span class="badge">SQL</span>
-                            <span class="badge">Dados em nuvem</span>
-                        </div>
-                        <h3>Calculadora de Emissão de Carbono para Empresas</h3>
-                        <p>Sistema web para calcular e acompanhar indicadores de emissão de carbono, com persistência de dados via Supabase na nuvem.</p>
-                        <div class="video-wrap">
-                            <iframe width="100%" height="180" src="https://www.youtube.com/embed/_qHIczeK3Uc" frameborder="0" loading="lazy" allowfullscreen title="Demonstração em vídeo: Calculadora de Emissão de Carbono"></iframe>
-                        </div>
-                        <button class="btn-code" onclick="abrirProjeto('https://github.com/mssantanadev/aps_carbono')">
-                            <i class="fab fa-github"></i> Ver Código
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer" id="contato">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-left">
-                <div class="footer-logo">MS</div>
-                <p>Desenvolvedor C# · ASP.NET · SQL Server</p>
-                <a href="mailto:matheussantana.develop@gmail.com" class="footer-email">
-                    <i class="fas fa-envelope"></i> matheussantana.develop@gmail.com
-                </a>
-            </div>
-            <div class="footer-right">
-                <p class="footer-label">Redes sociais</p>
-                <div class="redes">
-                    <a href="https://www.instagram.com/matheusz__santana/" target="_blank" title="Instagram">
-                        <i class="fab fa-instagram"></i>
+                <article class="project reveal">
+                    <div class="project-number">CASO 02</div>
+                    <a class="project-media" href="https://www.youtube.com/watch?v=3ODU_kzfP0Q" target="_blank" rel="noopener noreferrer" aria-label="Assistir demonstração da API de Empréstimo Consignado no YouTube">
+                        <img src="https://img.youtube.com/vi/3ODU_kzfP0Q/maxresdefault.jpg" alt="Documentação da API de Empréstimo Consignado" loading="lazy">
+                        <span class="play-label">Ver demonstração <b aria-hidden="true">↗</b></span>
                     </a>
-                    <a href="https://www.linkedin.com/in/matheusdssantana" target="_blank" title="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/mssantanadev" target="_blank" title="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <span>© 2026 Matheus Santana</span>
-        </div>
-    </div>
-</footer>
+                    <div class="project-copy">
+                        <p class="project-kind">API · domínio que conheço no trabalho</p>
+                        <h3>Empréstimo Consignado</h3>
+                        <p>API REST para cadastrar, consultar e excluir propostas, processando prazo, taxa, renda e score de crédito com documentação interativa.</p>
+                        <ul class="tags" aria-label="Tecnologias">
+                            <li>C#</li><li>ASP.NET</li><li>SQL Server</li><li>REST</li><li>Swagger / Redoc</li>
+                        </ul>
+                        <a class="case-link" href="https://github.com/mssantanadev/Web-API-Empr-stimos" target="_blank" rel="noopener noreferrer">Abrir repositório <span aria-hidden="true">↗</span></a>
+                    </div>
+                </article>
 
-<script src="Js/script.js"></script>
+                <article class="project reveal">
+                    <div class="project-number">CASO 03</div>
+                    <a class="project-media" href="https://www.youtube.com/watch?v=XK4pNCYyWv0" target="_blank" rel="noopener noreferrer" aria-label="Assistir demonstração da Finance Intelligent API no YouTube">
+                        <img src="https://img.youtube.com/vi/XK4pNCYyWv0/maxresdefault.jpg" alt="Documentação da Finance Intelligent API" loading="lazy">
+                        <span class="play-label">Ver demonstração <b aria-hidden="true">↗</b></span>
+                    </a>
+                    <div class="project-copy">
+                        <p class="project-kind">API · dados econômicos em tempo real</p>
+                        <h3>Finance Intelligent API</h3>
+                        <p>Consulta SELIC, IPCA e câmbio em fontes externas, mantendo histórico e uma documentação Swagger pronta para exploração.</p>
+                        <ul class="tags" aria-label="Tecnologias">
+                            <li>C#</li><li>ASP.NET Core</li><li>REST</li><li>JSON</li><li>Swagger</li>
+                        </ul>
+                        <a class="case-link" href="https://github.com/mssantanadev/FinanceIntelligent.API" target="_blank" rel="noopener noreferrer">Abrir repositório <span aria-hidden="true">↗</span></a>
+                    </div>
+                </article>
+
+                <article class="project reveal">
+                    <div class="project-number">CASO 04</div>
+                    <a class="project-media" href="https://www.youtube.com/watch?v=veBtnNvcUpA" target="_blank" rel="noopener noreferrer" aria-label="Assistir demonstração do MS Bank no YouTube">
+                        <img src="https://img.youtube.com/vi/veBtnNvcUpA/maxresdefault.jpg" alt="Tela do projeto MS Bank" loading="lazy">
+                        <span class="play-label">Ver demonstração <b aria-hidden="true">↗</b></span>
+                    </a>
+                    <div class="project-copy">
+                        <p class="project-kind">Aplicação MVC · regras de negócio</p>
+                        <h3>MS Bank</h3>
+                        <p>Simulador bancário com depósitos, saques, transferências e extrato. Um exercício de estado, validação e consistência financeira.</p>
+                        <ul class="tags" aria-label="Tecnologias">
+                            <li>C#</li><li>MVC</li><li>REST API</li><li>JSON</li>
+                        </ul>
+                        <a class="case-link" href="https://github.com/mssantanadev/Ms-Bank" target="_blank" rel="noopener noreferrer">Abrir repositório <span aria-hidden="true">↗</span></a>
+                    </div>
+                </article>
+
+                <article class="project reveal">
+                    <div class="project-number">CASO 05</div>
+                    <a class="project-media" href="https://www.youtube.com/watch?v=e69RqxhN1oo" target="_blank" rel="noopener noreferrer" aria-label="Assistir demonstração do Dashboard de Tarefas no YouTube">
+                        <img src="https://img.youtube.com/vi/e69RqxhN1oo/maxresdefault.jpg" alt="Tela do Dashboard de Gerenciamento de Tarefas" loading="lazy">
+                        <span class="play-label">Ver demonstração <b aria-hidden="true">↗</b></span>
+                    </a>
+                    <div class="project-copy">
+                        <p class="project-kind">Sistema web · organização de fluxo</p>
+                        <h3>Dashboard de Tarefas</h3>
+                        <p>Sistema MVC para registrar, organizar e acompanhar tarefas com persistência em banco de dados.</p>
+                        <ul class="tags" aria-label="Tecnologias">
+                            <li>C#</li><li>ASP.NET</li><li>SQL Server</li>
+                        </ul>
+                        <a class="case-link" href="https://github.com/mssantanadev/sistema-dashboard" target="_blank" rel="noopener noreferrer">Abrir repositório <span aria-hidden="true">↗</span></a>
+                    </div>
+                </article>
+
+                <article class="project reveal">
+                    <div class="project-number">CASO 06</div>
+                    <a class="project-media" href="https://www.youtube.com/watch?v=_qHIczeK3Uc" target="_blank" rel="noopener noreferrer" aria-label="Assistir demonstração da Calculadora de Carbono no YouTube">
+                        <img src="https://img.youtube.com/vi/_qHIczeK3Uc/maxresdefault.jpg" alt="Tela da Calculadora de Emissão de Carbono" loading="lazy">
+                        <span class="play-label">Ver demonstração <b aria-hidden="true">↗</b></span>
+                    </a>
+                    <div class="project-copy">
+                        <p class="project-kind">Aplicação web · dados ambientais</p>
+                        <h3>Calculadora de Carbono</h3>
+                        <p>Cálculo e acompanhamento de indicadores de emissão para empresas, com persistência de dados em nuvem.</p>
+                        <ul class="tags" aria-label="Tecnologias">
+                            <li>JavaScript</li><li>SQL</li><li>Supabase</li>
+                        </ul>
+                        <a class="case-link" href="https://github.com/mssantanadev/aps_carbono" target="_blank" rel="noopener noreferrer">Abrir repositório <span aria-hidden="true">↗</span></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact" id="contato" aria-labelledby="contact-title">
+            <div class="contact-stamp reveal" aria-hidden="true">DISPONÍVEL<br>PARA CONVERSAR</div>
+            <div class="contact-copy reveal">
+                <p class="eyebrow">04 / Contato</p>
+                <h2 id="contact-title">Tem um sistema para construir ou uma falha difícil de encontrar?</h2>
+                <a class="contact-email" href="mailto:matheussantana.develop@gmail.com">matheussantana.develop<br class="email-break">@gmail.com <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="contact-links reveal">
+                <a href="https://github.com/mssantanadev" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a>
+                <a href="https://www.linkedin.com/in/matheusdssantana" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a>
+                <a href="https://www.instagram.com/matheusz__santana/" target="_blank" rel="noopener noreferrer">Instagram <span>↗</span></a>
+                <a href="Curriculo/Curriculo_Matheus_Santana.pdf" download>Currículo <span>↓</span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <span>Matheus dos Santos Santana</span>
+        <span>São Paulo, SP</span>
+        <span>© <span id="year">2026</span> · Construído com intenção.</span>
+    </footer>
+
+    <script src="Js/script.js"></script>
 </body>
 </html>

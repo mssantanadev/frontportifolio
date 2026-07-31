@@ -1,105 +1,52 @@
-function abrirProjeto(url) {
-    window.open(url, '_blank');
-}
-
 document.addEventListener('DOMContentLoaded', function () {
-    var track    = document.getElementById('carouselTrack');
-    var prevBtn  = document.getElementById('prevBtn');
-    var nextBtn  = document.getElementById('nextBtn');
+    var header = document.querySelector('.site-header');
+    var menuButton = document.querySelector('.menu-button');
+    var nav = document.querySelector('.nav');
+    var navLinks = document.querySelectorAll('.nav a');
+    var year = document.getElementById('year');
 
-    if (!track) return;
+    if (year) year.textContent = new Date().getFullYear();
 
-    var wrapper = track.parentElement; // .carousel-wrapper (overflow:hidden)
-    var cards   = Array.from(track.querySelectorAll('.project-card'));
-    var GAP     = 24;
-    var current = 0;
-    var cardW   = 0;
-
-    function getVisible() {
-        var w = wrapper.offsetWidth;
-        if (w < 600) return 1;
-        if (w < 900) return 2;
-        return 3;
+    function updateHeader() {
+        header.classList.toggle('is-scrolled', window.scrollY > 20);
     }
 
-    function setup() {
-        var visible = getVisible();
-        // Largura de cada card = (wrapper - gaps entre cards visíveis) / nº de cards visíveis
-        cardW = (wrapper.offsetWidth - GAP * (visible - 1)) / visible;
+    updateHeader();
+    window.addEventListener('scroll', updateHeader, { passive: true });
 
-        // Aplica largura diretamente em cada card via inline style
-        cards.forEach(function(c) {
-            c.style.flexBasis = cardW + 'px';
-            c.style.width     = cardW + 'px';
-            c.style.minWidth  = cardW + 'px'; // garante que não encolhe
-            c.style.maxWidth  = cardW + 'px';
+    if (menuButton && nav) {
+        menuButton.addEventListener('click', function () {
+            var isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+            menuButton.setAttribute('aria-expanded', String(!isOpen));
+            nav.classList.toggle('is-open', !isOpen);
+            document.body.classList.toggle('menu-open', !isOpen);
         });
 
-        current = 0;
-        updateButtons();
-        applyTransform();
+        navLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                menuButton.setAttribute('aria-expanded', 'false');
+                nav.classList.remove('is-open');
+                document.body.classList.remove('menu-open');
+            });
+        });
     }
 
-    function applyTransform() {
-        // offset = índice do primeiro card visível × (largura do card + gap)
-        var offset = current * (cardW + GAP);
-        track.style.transform = 'translateX(-' + offset + 'px)';
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var revealItems = document.querySelectorAll('.reveal');
+
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+        revealItems.forEach(function (item) { item.classList.add('is-visible'); });
+        return;
     }
 
-    function updateButtons() {
-        var visible = getVisible();
-        prevBtn.disabled = (current === 0);
-        nextBtn.disabled = (current >= cards.length - visible);
-    }
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px' });
 
-    function goTo(page) {
-        var visible = getVisible();
-        current = page * visible;
-        current = Math.max(0, Math.min(current, cards.length - visible));
-        applyTransform();
-        updateButtons();
-    }
-
-    prevBtn.addEventListener('click', function () {
-        var visible = getVisible();
-        if (current > 0) {
-            current = Math.max(0, current - visible);
-            applyTransform();
-            updateButtons();
-        }
-    });
-
-    nextBtn.addEventListener('click', function () {
-        var visible = getVisible();
-        if (current < cards.length - visible) {
-            current = Math.min(cards.length - visible, current + visible);
-            applyTransform();
-            updateButtons();
-        }
-    });
-
-    // Swipe mobile
-    var startX = 0;
-    track.addEventListener('touchstart', function (e) {
-        startX = e.touches[0].clientX;
-    }, { passive: true });
-    track.addEventListener('touchend', function (e) {
-        var diff = startX - e.changedTouches[0].clientX;
-        if (Math.abs(diff) > 50) {
-            if (diff > 0) nextBtn.click();
-            else prevBtn.click();
-        }
-    }, { passive: true });
-
-    // Resize: recalcula tudo
-    var resizeTimer;
-    window.addEventListener('resize', function () {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(setup, 200);
-    });
-
-    // Init: dois frames para o browser renderizar fontes e layout
-    requestAnimationFrame(function () {
-        requestAnimationFrame(setup);
-    });
+    revealItems.forEach(function (item) { observer.observe(item); });
 });
