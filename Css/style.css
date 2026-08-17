@@ -54,7 +54,8 @@ button { font: inherit; }
     z-index: 100;
     height: var(--header-height);
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr auto auto;
+    gap: clamp(20px, 2.5vw, 40px);
     align-items: center;
     padding: 0 clamp(24px, 4vw, 64px);
     border-bottom: 1px solid transparent;
@@ -91,6 +92,50 @@ button { font: inherit; }
     gap: clamp(20px, 3vw, 46px);
     grid-column: 2;
     grid-row: 1;
+}
+
+.header-actions {
+    display: flex;
+    grid-column: 3;
+    grid-row: 1;
+    align-items: center;
+    gap: 20px;
+}
+
+.language-switcher {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 9px;
+    border: 1px solid rgba(238, 232, 220, .45);
+    border-radius: 100px;
+    font-family: var(--mono);
+    font-size: 9px;
+    line-height: 1;
+    letter-spacing: .08em;
+}
+
+.language-switcher > span { opacity: .35; }
+
+.language-option {
+    padding: 2px;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    letter-spacing: inherit;
+    cursor: pointer;
+    opacity: .45;
+    transition: color .2s ease, opacity .2s ease;
+}
+
+.language-option:hover,
+.language-option:focus-visible,
+.language-option.is-active {
+    color: var(--signal);
+    opacity: 1;
 }
 
 .nav a {
@@ -147,6 +192,7 @@ button { font: inherit; }
 }
 
 .hero-copy, .portrait { position: relative; z-index: 1; }
+.hero-copy { min-width: 0; }
 
 .eyebrow, .project-kind, .section-index, .timeline-date, .toolbox-title, .project-number, .footer {
     font-family: var(--mono);
@@ -175,7 +221,7 @@ button { font: inherit; }
     max-width: 910px;
     margin: 0;
     font-family: var(--display);
-    font-size: clamp(50px, 7.2vw, 112px);
+    font-size: clamp(46px, 5.45vw, 86px);
     font-weight: 400;
     line-height: .87;
     letter-spacing: -.075em;
@@ -398,6 +444,8 @@ button { font: inherit; }
     font-size: 8px;
     letter-spacing: .12em;
 }
+
+body[data-language="en"] .timeline-item.current::before { content: 'CURRENT'; }
 
 .toolbox {
     display: grid;
@@ -629,6 +677,7 @@ button { font: inherit; }
 
 @media (max-width: 1000px) {
     .hero { grid-template-columns: minmax(0, 1.2fr) minmax(250px, .8fr); }
+    .hero h1 { font-size: clamp(42px, 4.8vw, 60px); }
     .hero-bottom { grid-template-columns: 1fr; }
     .hero-actions { flex-direction: row; align-items: center; flex-wrap: wrap; }
     .manifesto-layout, .trajectory-heading { grid-template-columns: 1fr; }
@@ -636,20 +685,28 @@ button { font: inherit; }
     .project { grid-template-columns: 60px minmax(250px, .8fr) minmax(280px, 1.2fr); }
 }
 
+@media (max-width: 900px) and (min-width: 761px) {
+    .hero { grid-template-columns: 1fr; }
+    .portrait { width: min(55%, 400px); margin-top: 24px; }
+}
+
 @media (max-width: 760px) {
     :root { --header-height: 66px; }
 
-    .site-header { padding: 0 20px; }
+    .site-header { grid-template-columns: 1fr auto; gap: 16px; padding: 0 20px; }
+
+    .header-actions { grid-column: 2; gap: 14px; }
+
+    .language-switcher { padding: 5px 7px; }
 
     .menu-button {
         display: flex;
-        grid-column: 2;
-        grid-row: 1;
         align-items: center;
         gap: 10px;
         padding: 8px 0;
         border: 0;
         background: transparent;
+        color: inherit;
         font-family: var(--mono);
         font-size: 10px;
         text-transform: uppercase;
@@ -682,7 +739,7 @@ button { font: inherit; }
         padding: calc(var(--header-height) + 54px) 20px 70px;
     }
 
-    .hero h1 { font-size: clamp(46px, 14vw, 78px); }
+    .hero h1 { font-size: clamp(28px, 8.5vw, 64px); }
     .hero-bottom { margin-top: 28px; }
     .portrait { width: min(82%, 380px); margin: 20px auto 0; }
     .margin-note { display: none; }

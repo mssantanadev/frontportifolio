@@ -22,10 +22,18 @@
             <span>M/S</span><sup>26</sup>
         </a>
 
-        <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu-principal">
-            <span>Menu</span>
-            <span class="menu-mark" aria-hidden="true"></span>
-        </button>
+        <div class="header-actions">
+            <div class="language-switcher" role="group" aria-label="Selecionar idioma">
+                <button class="language-option is-active" type="button" data-language="pt" aria-pressed="true" aria-label="Português">PT</button>
+                <span aria-hidden="true">/</span>
+                <button class="language-option" type="button" data-language="en" aria-pressed="false" aria-label="English">EN</button>
+            </div>
+
+            <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu-principal">
+                <span>Menu</span>
+                <span class="menu-mark" aria-hidden="true"></span>
+            </button>
+        </div>
 
         <nav class="nav" id="menu-principal" aria-label="Navegação principal">
             <a href="#sobre"><span>01</span> Perfil</a>
